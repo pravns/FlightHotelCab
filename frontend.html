@@ -5,49 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/home/pravn27/Desktop/Codingmart_Technologies/FlightHotelCab/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="row container fluid">
       <div class="col-md-4" id ="flight">
         <h1>Flights Available</h1> <hr>
-        <div id="fdetails" style="display:none; color:blue">
-        <ol class="rounded-list">
-            <li>
-              <div id="fd1" class="fc1"> </div>
-            </li>
-            <li>
-              <div id="fd2" class="fc2"></div>
-            </li>
-            <li>
-              <div id="fd3" class="fc3"></div>
-            </li>
-            <li>
-              <div id="fd4" class="fc4"></div>
-            </li>
-            <li>
-              <div id="fd5" class="fc5"></div>
-            </li>
-        </ol>
+        <div id="fdetails">
+          <ol id="roundedlist">
+
+          </ol>
 
         <div class="row container" id="radio-button">
           <h3> Select any one... </h3>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc1" id="radio1" onchange="changeColour(this);" value="IndiGo and Fare: 3000 Rs" type="radio"> 1
+            <input name="radioGroup" class="fc1" id="radio1" onchange="changeColour(1)" value="IndiGo and Fare: 3000 Rs" type="radio"> 1
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc2" id="radio2" value="JetAir and Fare: 4000 Rs" type="radio"> 2
+            <input name="radioGroup" class="fc2" id="radio2" onchange="changeColour(2)" value="JetAir and Fare: 4000 Rs" type="radio"> 2
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc3" id="radio3" value="GoAir and Fare: 4800 Rs" type="radio"> 3
+            <input name="radioGroup" class="fc3" id="radio3" onchange="changeColour(3)" value="GoAir and Fare: 4800 Rs" type="radio"> 3
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc4" id="radio4" value="Spicejet and Fare: 5500 Rs" type="radio"> 4
+            <input name="radioGroup" class="fc4" id="radio4" onchange="changeColour(4)" value="Spicejet and Fare: 5500 Rs" type="radio"> 4
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc5" id="radio5" value="AirIndia and Fare: 2500 Rs" type="radio"> 5
+            <input name="radioGroup" class="fc5" id="radio5" onchange="changeColour(5)" value="AirIndia and Fare: 2500 Rs" type="radio"> 5
           </label>
         </div>
         </div>
@@ -147,6 +131,6 @@
         <input type="submit" value="Enter" onclick ="find_text();" class="btn btn-info"/>
       </div>
     </div>
-    <script src="/home/pravn27/Desktop/Codingmart_Technologies/FlightHotelCab/functionality.js"></script>
+    <script src="functionality.js"></script>
   </body>
 </html>
