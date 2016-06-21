@@ -1,5 +1,5 @@
 h2{
-	font-size: 20px;
+    font-size: 20px;
 }
 #flight {
     height:400px;
@@ -66,14 +66,7 @@ ol ol {
     background: #222;
 }
 
-/*.rounded-list div:hover:before{
-    -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);    
-} */
+
 
 #roundedlist div:before {
     content: counter(li);
@@ -98,5 +91,4 @@ ol ol {
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
-
 
