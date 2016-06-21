@@ -62,7 +62,7 @@ function changeColour(element) {
   	}
 }
 
-*$('#radio-button').on('change', function() {
+$('#radio-button').on('change', function() {
    alert($('input[name="radioGroup"]:checked', '#radio-button').val()); 
    alert($(this).attr('class'));
 }); 
