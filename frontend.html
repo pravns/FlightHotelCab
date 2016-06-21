@@ -39,40 +39,27 @@
         
        <div class="col-md-4" id ="hotel">
         <h1>Hotel Available</h1> <hr>
-        <div id="hdetails" style="display:none; color:blue">
-        <ol class="rounded-list">
-            <li>
-              <div id="hd1" class=""></div>
-            </li>
-            <li>
-              <div id="hd2"></div>
-            </li>
-            <li>
-              <div id="hd3"></div>
-            </li>
-            <li>
-              <div id="hd4"></div>
-            </li>
-            <li>
-              <div id="hd5"></div>
-            </li>
+        <div id="hdetails">
+          <ol id="roundedlist1">
+              
           </ol>
+
           <div class="row container">
           <h3> Select any one option... </h3>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio6" value="option1" type="radio"> 1
+            <input name="radioGroup" id="radio6" class="fc1" value="option1" onchange="changeColour1(1)" type="radio"> 1
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio7" value="option2" type="radio"> 2
+            <input name="radioGroup" id="radio7" class="fc2" value="option2" onchange="changeColour1(2)" type="radio"> 2
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio8" value="option3" type="radio"> 3
+            <input name="radioGroup" id="radio8" class="fc3" value="option3" onchange="changeColour1(3)" type="radio"> 3
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio9" value="option3" type="radio"> 4
+            <input name="radioGroup" id="radio9" class="fc4" value="option3" onchange="changeColour1(4)" type="radio"> 4
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio10" value="option3" type="radio"> 5
+            <input name="radioGroup" id="radio10" class="fc5" value="option3" onchange="changeColour1(5)" type="radio"> 5
           </label>
         </div>
 
@@ -80,40 +67,27 @@
       </div>
        <div class="col-md-4" id ="cab">
         <h1>Cab Available</h1> <hr>
-        <div id="cdetails" style="display:none; color:blue">
-        <ol class="rounded-list">
-            <li>
-              <div id="cd1"></div>
-            </li>
-            <li>
-              <div id="cd2"></div>
-            </li>
-            <li>
-              <div id="cd3"></div>
-            </li>
-            <li>
-              <div id="cd4"></div>
-            </li>
-            <li>
-              <div id="cd5"></div>
-            </li>
+        <div id="cdetails">
+          <ol id="roundedlist2">
+            
           </ol>
+
           <div class="row container">
           <h3> Select any one option... </h3>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio11" value="option1" type="radio"> 1
+            <input name="radioGroup" class= "fd1" id="radio11" onchange="changeColour2(1)" value="option1" type="radio"> 1
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio12" value="option2" type="radio"> 2
+            <input name="radioGroup" class= "fd2" id="radio12" onchange="changeColour2(2)" value="option2" type="radio"> 2
+          </label>
+          <label class="radio-inline"> 
+            <input name="radioGroup" class= "fd3" id="radio13" onchange="changeColour2(3)" value="option3" type="radio"> 3
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio13" value="option3" type="radio"> 3
+            <input name="radioGroup" class= "fd4" id="radio14" onchange="changeColour2(4)" value="option3" type="radio"> 4
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio14" value="option3" type="radio"> 4
-          </label>
-          <label class="radio-inline">
-            <input name="radioGroup" id="radio15" value="option3" type="radio"> 5
+            <input name="radioGroup" class= "fd5" id="radio15" onchange="changeColour2(5)" value="option3" type="radio"> 5
           </label>
         </div>
 
