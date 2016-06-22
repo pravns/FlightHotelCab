@@ -37,10 +37,9 @@ ol {
 ol ol {
     margin: 0 0 0 2em;
 }
+       
 
-          
-
-.rounded-list div {
+#roundedlist1 div {
     position: relative;
     display: block;
     padding: .4em .4em .4em 2em;
@@ -59,7 +58,7 @@ ol ol {
     transition: all .3s ease-out;    
 }
 
-.rounded-list div:hover {
+#roundedlist1 div:hover {
     background: #222;
 }
 
@@ -72,7 +71,7 @@ ol ol {
     transform: rotate(360deg);    
 } */
 
-.rounded-list div:before {
+#roundedlist1 div:before {
     content: counter(li);
     counter-increment: li;
     position: absolute;    
@@ -96,4 +95,101 @@ ol ol {
     transition: all .3s ease-out;
 }
 
+#roundedlist2 div {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #444;
+    color: #efefef;
+    text-decoration: none;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;    
+}
 
+#roundedlist2 div:hover {
+    background: #222;
+}
+
+
+#roundedlist2 div:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;    
+    left: -0.3em;
+    top: 64%;
+    margin-top: -1.3em;
+    background: #bf4c24;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #222;
+    text-align: center;
+    font-weight: bold;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+#roundedlist3 div {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #444;
+    color: #efefef;
+    text-decoration: none;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;    
+}
+
+#roundedlist3 div:hover {
+    background: #222;
+}
+
+#roundedlist3 div:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;    
+    left: -0.3em;
+    top: 64%;
+    margin-top: -1.3em;
+    background: #bf4c24;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #222;
+    text-align: center;
+    font-weight: bold;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.active {
+    font-size: 20px;
+}

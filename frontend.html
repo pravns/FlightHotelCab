@@ -5,49 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="E:\Codingmart Technologies\Flight ,Hotel & Cab\style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="row container fluid">
       <div class="col-md-4" id ="flight">
         <h1>Flights Available</h1> <hr>
-        <div id="fdetails" style="display:none; color:blue">
-        <ol class="rounded-list">
-            <li>
-              <div id="fd1" class="fc1"> </div>
-            </li>
-            <li>
-              <div id="fd2" class="fc2"></div>
-            </li>
-            <li>
-              <div id="fd3" class="fc3"></div>
-            </li>
-            <li>
-              <div id="fd4" class="fc4"></div>
-            </li>
-            <li>
-              <div id="fd5" class="fc5"></div>
-            </li>
-        </ol>
+        <div id="fdetails">
+          <ol id="roundedlist1">
+
+          </ol>
 
         <div class="row container" id="radio-button">
           <h3> Select any one... </h3>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc1" id="radio1" onchange="changeColour(this);" value="IndiGo and Fare: 3000 Rs" type="radio"> 1
+            <input name="radioGroup" id="radio1" onchange="changeColour(1,1)" value="IndiGo and Fare: 3000 Rs" type="radio"> 1
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc2" id="radio2" value="JetAir and Fare: 4000 Rs" type="radio"> 2
+            <input name="radioGroup" id="radio2" onchange="changeColour(2,1)" value="JetAir and Fare: 4000 Rs" type="radio"> 2
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc3" id="radio3" value="GoAir and Fare: 4800 Rs" type="radio"> 3
+            <input name="radioGroup" id="radio3" onchange="changeColour(3,1)" value="GoAir and Fare: 4800 Rs" type="radio"> 3
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc4" id="radio4" value="Spicejet and Fare: 5500 Rs" type="radio"> 4
+            <input name="radioGroup" id="radio4" onchange="changeColour(4,1)" value="Spicejet and Fare: 5500 Rs" type="radio"> 4
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" class="fc5" id="radio5" value="AirIndia and Fare: 2500 Rs" type="radio"> 5
+            <input name="radioGroup" id="radio5" onchange="changeColour(5,1)" value="AirIndia and Fare: 2500 Rs" type="radio"> 5
           </label>
         </div>
         </div>
@@ -55,40 +39,27 @@
         
        <div class="col-md-4" id ="hotel">
         <h1>Hotel Available</h1> <hr>
-        <div id="hdetails" style="display:none; color:blue">
-        <ol class="rounded-list">
-            <li>
-              <div id="hd1" class=""></div>
-            </li>
-            <li>
-              <div id="hd2"></div>
-            </li>
-            <li>
-              <div id="hd3"></div>
-            </li>
-            <li>
-              <div id="hd4"></div>
-            </li>
-            <li>
-              <div id="hd5"></div>
-            </li>
+        <div id="hdetails">
+          <ol id="roundedlist2">
+              
           </ol>
-          <div class="row container">
+
+          <div class="row container" id="radio-button">
           <h3> Select any one option... </h3>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio6" value="option1" type="radio"> 1
+            <input name="radioGroup" id="radio6" onchange="changeColour(1,2)" value="Hotel Taj and Fare: 2000 Rs/day" type="radio"> 1
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio7" value="option2" type="radio"> 2
+            <input name="radioGroup" id="radio7" onchange="changeColour(2,2)" value="The Leela Palace and Fare: 5000 Rs/day "  type="radio"> 2
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio8" value="option3" type="radio"> 3
+            <input name="radioGroup" id="radio8" onchange="changeColour(3,2)" value="The Taj Mahal and Fare: 10000 Rs/day" type="radio"> 3
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio9" value="option3" type="radio"> 4
+            <input name="radioGroup" id="radio9" onchange="changeColour(4,2)" value="The Oberoi Grand and Fare: 12000 Rs/day" type="radio"> 4
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio10" value="option3" type="radio"> 5
+            <input name="radioGroup" id="radio10" onchange="changeColour(5,2)" value="Umaid Bhawan Palace and Fare: 20000 Rs/day " type="radio"> 5
           </label>
         </div>
 
@@ -96,40 +67,27 @@
       </div>
        <div class="col-md-4" id ="cab">
         <h1>Cab Available</h1> <hr>
-        <div id="cdetails" style="display:none; color:blue">
-        <ol class="rounded-list">
-            <li>
-              <div id="cd1"></div>
-            </li>
-            <li>
-              <div id="cd2"></div>
-            </li>
-            <li>
-              <div id="cd3"></div>
-            </li>
-            <li>
-              <div id="cd4"></div>
-            </li>
-            <li>
-              <div id="cd5"></div>
-            </li>
+        <div id="cdetails">
+          <ol id="roundedlist3">
+            
           </ol>
-          <div class="row container">
+
+          <div class="row container" id="radio-button">
           <h3> Select any one option... </h3>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio11" value="option1" type="radio"> 1
+            <input name="radioGroup" id="radio11" onchange="changeColour(1,3)" value="Taxi for sure and Fare: 20 Rs/km" type="radio"> 1
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio12" value="option2" type="radio"> 2
+            <input name="radioGroup" id="radio12" onchange="changeColour(2,3)" value="Uber and Fare: 12 Rs/km" type="radio"> 2
+          </label>
+          <label class="radio-inline"> 
+            <input name="radioGroup" id="radio13" onchange="changeColour(3,3)" value="Ola and Fare: 10 Rs/km" type="radio"> 3
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio13" value="option3" type="radio"> 3
+            <input name="radioGroup" id="radio14" onchange="changeColour(4,3)" value=" Spot city taxi and Fare: 15 Rs/km" type="radio"> 4
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio14" value="option3" type="radio"> 4
-          </label>
-          <label class="radio-inline">
-            <input name="radioGroup" id="radio15" value="option3" type="radio"> 5
+            <input name="radioGroup" id="radio15" onchange="changeColour(5,3)" value="Meru cabs and Fare: 8 Rs/km" type="radio"> 5
           </label>
         </div>
 
@@ -147,6 +105,6 @@
         <input type="submit" value="Enter" onclick ="find_text();" class="btn btn-info"/>
       </div>
     </div>
-    <script src="E:\Codingmart Technologies\Flight ,Hotel & Cab\functionality.js"></script>
+    <script src="functionality.js"></script>
   </body>
 </html>
