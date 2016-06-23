@@ -1,5 +1,5 @@
 h2{
-	font-size: 20px;
+    font-size: 20px;
 }
 #flight {
     height:400px;
@@ -39,7 +39,16 @@ ol ol {
 }
        
 
+<<<<<<< HEAD
 #roundedlist1 div {
+=======
+.active {
+    color: green !important;
+    background: white !important;
+}          
+
+#roundedlist div {
+>>>>>>> 8d2cd2332e02d06500f57c4518cf289a390b7c69
     position: relative;
     display: block;
     padding: .4em .4em .4em 2em;
@@ -62,14 +71,6 @@ ol ol {
     background: #222;
 }
 
-/*.rounded-list div:hover:before{
-    -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);    
-} */
 
 #roundedlist1 div:before {
     content: counter(li);

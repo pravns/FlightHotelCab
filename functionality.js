@@ -83,3 +83,4 @@ function active_fun(name,c) {
 	var selectedItem = name.getElementsByClassName('fd'+c);
 	selectedItem[0].className = selectedItem[0].className +' active';
 }
+
