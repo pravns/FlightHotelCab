@@ -37,18 +37,8 @@ ol {
 ol ol {
     margin: 0 0 0 2em;
 }
-       
 
-<<<<<<< HEAD
 #roundedlist1 div {
-=======
-.active {
-    color: green !important;
-    background: white !important;
-}          
-
-#roundedlist div {
->>>>>>> 8d2cd2332e02d06500f57c4518cf289a390b7c69
     position: relative;
     display: block;
     padding: .4em .4em .4em 2em;
