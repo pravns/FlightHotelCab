@@ -1,17 +1,14 @@
 h2{
-    font-size: 20px;
+    font-size: 25px;
 }
 #flight {
     height:400px;
-    
 }
 #hotel {
     height:400px;
-    
 }
 #cab {
     height:400px;
-    
 }
 
 hr {
@@ -22,8 +19,6 @@ hr {
     margin: 1em 0;
     padding: 0; 
 }
-
-
 ol {
     counter-reset: li;
     list-style: none;
@@ -37,7 +32,7 @@ ol {
 ol ol {
     margin: 0 0 0 2em;
 }
-
+       
 #roundedlist1 div {
     position: relative;
     display: block;
@@ -60,7 +55,6 @@ ol ol {
 #roundedlist1 div:hover {
     background: #222;
 }
-
 
 #roundedlist1 div:before {
     content: counter(li);
@@ -182,6 +176,7 @@ ol ol {
 }
 
 .active {
-    font-size: 20px;
-    background-color: white;
+    font-size: 18px;
+    background-color: #ddd !important;
+    color: green !important;
 }
