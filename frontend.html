@@ -4,107 +4,104 @@
     <title>Flight,Hotel and Cab availability</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <script src="angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
+  <body class="container fluid" ng-app="app" ng-controller="appcontroller">
     <div class="row container fluid">
-      <div class="col-md-4" id ="flight">
+      <div class="col-md-4" id ="flight" ng-show="flightshow">
         <h1>Flights Available</h1> <hr>
         <div id="fdetails">
-          <ol id="roundedlist">
+          <ol id="roundedlist1" ng-style="option">
+            <li ng-repeat="i in flight" ng-class="{active: $index==flightIndex}">{{i}}</li>
           </ol>
-
-        <div class="row container" id="radio-button">
-          <h3> Select any one... </h3>
-          <label class="radio-inline">
-            <input name="radioGroup" id="radio1" onchange="changeColour(1,1)" value="IndiGo and Fare: 3000 Rs" type="radio"> 1
-          </label>
-          <label class="radio-inline">
-            <input name="radioGroup" id="radio2" onchange="changeColour(2,1)" value="JetAir and Fare: 4000 Rs" type="radio"> 2
-          </label>
-          <label class="radio-inline">
-            <input name="radioGroup" id="radio3" onchange="changeColour(3,1)" value="GoAir and Fare: 4800 Rs" type="radio"> 3
-          </label>
-          <label class="radio-inline">
-            <input name="radioGroup" id="radio4" onchange="changeColour(4,1)" value="Spicejet and Fare: 5500 Rs" type="radio"> 4
-          </label>
-          <label class="radio-inline">
-            <input name="radioGroup" id="radio5" onchange="changeColour(5,1)" value="AirIndia and Fare: 2500 Rs" type="radio"> 5
-          </label>
-        </div>
+          <div class="row container" id="radio-button">
+            <h3> Select any one... </h3>
+            <label class="radio-inline">
+              <input name="radioGroup" id="radio1" ng-model="flightIndex" value="0" type="radio"> 1
+            </label>
+            <label class="radio-inline">
+              <input name="radioGroup" id="radio2" ng-model="flightIndex" value="1" type="radio"> 2
+            </label>
+            <label class="radio-inline">
+              <input name="radioGroup" id="radio3" ng-model="flightIndex" value="2" type="radio"> 3
+            </label>
+            <label class="radio-inline">
+              <input name="radioGroup" id="radio4" ng-model="flightIndex" value="3" type="radio"> 4
+            </label>
+            <label class="radio-inline">
+              <input name="radioGroup" id="radio5" ng-model="flightIndex" value="4" type="radio"> 5
+            </label>
+          </div>
+          <h2 ng-style="selected_option">{{flight[flightIndex]}}</h2>
         </div>
       </div>
         
-       <div class="col-md-4" id ="hotel">
+       <div class="col-md-4" id ="hotel" ng-show="flightIndex != hotelshow">
         <h1>Hotel Available</h1> <hr>
         <div id="hdetails">
-          <ol id="roundedlist2">
-              
+          <ol id="roundedlist2" ng-style="option">
+            <li ng-repeat="i in hotel" ng-class="{active: $index == hotelIndex}">{{i}}</li>
           </ol>
-
           <div class="row container" id="radio-button">
           <h3> Select any one option... </h3>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio6" onchange="changeColour(1,2)" value="Hotel Taj and Fare: 2000 Rs/day" type="radio"> 1
+            <input name="radioGroup" id="radio6" ng-model="hotelIndex" value="0" type="radio"> 1
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio7" onchange="changeColour(2,2)" value="The Leela Palace and Fare: 5000 Rs/day "  type="radio"> 2
+            <input name="radioGroup" id="radio7" ng-model="hotelIndex" value="1" type="radio"> 2
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio8" onchange="changeColour(3,2)" value="The Taj Mahal and Fare: 10000 Rs/day" type="radio"> 3
+            <input name="radioGroup" id="radio8" ng-model="hotelIndex" value="2" type="radio"> 3
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio9" onchange="changeColour(4,2)" value="The Oberoi Grand and Fare: 12000 Rs/day" type="radio"> 4
+            <input name="radioGroup" id="radio9" ng-model="hotelIndex" value="3" type="radio"> 4
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio10" onchange="changeColour(5,2)" value="Umaid Bhawan Palace and Fare: 20000 Rs/day " type="radio"> 5
-
+            <input name="radioGroup" id="radio10" ng-model="hotelIndex" value="4" type="radio"> 5
           </label>
         </div>
-
+          <h2 ng-style="selected_option">{{hotel[hotelIndex]}}</h2>
         </div>
       </div>
-       <div class="col-md-4" id ="cab">
+       <div class="col-md-4" id ="cab" ng-show="hotelIndex != cabshow">
         <h1>Cab Available</h1> <hr>
         <div id="cdetails">
-          <ol id="roundedlist3">
-            
+          <ol id="roundedlist3" ng-style="option">
+            <li ng-repeat="i in cab" ng-class="{active: $index == cabIndex}">{{i}}</li>
           </ol>
-
           <div class="row container" id="radio-button">
           <h3> Select any one option... </h3>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio11" onchange="changeColour(1,3)" value="Taxi for sure and Fare: 20 Rs/km" type="radio"> 1
+            <input name="radioGroup" id="radio11" ng-model="cabIndex" value="0" type="radio"> 1
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio12" onchange="changeColour(2,3)" value="Uber and Fare: 12 Rs/km" type="radio"> 2
+            <input name="radioGroup" id="radio12" ng-model="cabIndex" value="1" type="radio"> 2
           </label>
           <label class="radio-inline"> 
-            <input name="radioGroup" id="radio13" onchange="changeColour(3,3)" value="Ola and Fare: 10 Rs/km" type="radio"> 3
+            <input name="radioGroup" id="radio13" ng-model="cabIndex" value="2" type="radio"> 3
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio14" onchange="changeColour(4,3)" value=" Spot city taxi and Fare: 15 Rs/km" type="radio"> 4
+            <input name="radioGroup" id="radio14" ng-model="cabIndex" value="3" type="radio"> 4
           </label>
           <label class="radio-inline">
-            <input name="radioGroup" id="radio15" onchange="changeColour(5,3)" value="Meru cabs and Fare: 8 Rs/km" type="radio"> 5
+            <input name="radioGroup" id="radio15" ng-model="cabIndex" value="4" type="radio"> 5
           </label>
         </div>
-
+          <h2 ng-style="selected_option">{{cab[cabIndex]}}</h2>
         </div>
       </div>
-     
     </div>
     <hr><br>
     <div class="row container">
       <div class="col-md-2"> </div>
-      <div class="col-md-8">
-        <input type="text" id="info" placeholder="Do you need help....! Chat here" style="width:650px; font-size:large; height:40px;"/> 
-      </div>
-      <div class="col-md-2">
-        <input type="submit" value="Enter" onclick ="find_text();" class="btn btn-info"/>
+      <div class="col-md-10">
+        <h2> Want to Book a Flight !!! </h2>
+        <input type="text" ng-model="info" placeholder="Do you need help....! Chat here" style="width:650px; font-size:large; height:40px;"/>
+        <input type="submit" value="Enter" ng-click ="find_text()" class="btn btn-info"/> 
       </div>
     </div>
-    <script src="functionality.js"></script>
+    <script src="function_ng.js"></script>
   </body>
 </html>
